@@ -422,6 +422,11 @@ export class VirtualScrollerComponent implements OnInit, OnChanges, OnDestroy {
 		}
 	}
 
+	public defineItemSizes(maxChildSizePerWrapGroup: WrapGroupDimension[]) {
+		this.wrapGroupDimensions.maxChildSizePerWrapGroup = maxChildSizePerWrapGroup;
+		this.refresh_internal(false)
+	}
+
 	public refresh(): void {
 		this.refresh_internal(true);
 	}
